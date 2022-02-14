@@ -10,7 +10,6 @@ export namespace Components {
         "names": string[];
     }
     interface ViewList {
-        "arrayToPrint": Array<any>;
         "names": string;
     }
     interface ViewListItem {
@@ -47,7 +46,6 @@ declare namespace LocalJSX {
         "names"?: string[];
     }
     interface ViewList {
-        "arrayToPrint"?: Array<any>;
         "names"?: string;
     }
     interface ViewListItem {

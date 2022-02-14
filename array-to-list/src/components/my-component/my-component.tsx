@@ -13,7 +13,7 @@ export class MyComponent {
   render() {
       return(
         <ul>
-          Using pre-defined array:
+          Using hardcoded array within component:
           {this.names.map((name) => (
             <li>{name}</li>
           ))}

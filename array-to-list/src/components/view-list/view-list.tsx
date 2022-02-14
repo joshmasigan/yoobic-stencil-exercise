@@ -29,7 +29,7 @@ export class ViewList {
   // parseJSON in to namesArray
   componentWillLoad() {
     this.arrayDataWatcher(this.names);
-    
+
     // log names param
     console.log(this.names);
      // log namesArray after objects parsed in to array
@@ -40,7 +40,7 @@ export class ViewList {
     return (
       <Host>
         <ul>
-          Using custom view-list component
+          Using props to pass on name values
           {this.namesArray.map(name => (
             // <ViewListItem text={name}/>
             <li>{name}</li>
