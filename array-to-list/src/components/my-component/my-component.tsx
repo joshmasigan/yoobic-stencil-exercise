@@ -1,4 +1,6 @@
 import { Component, Prop, h } from '@stencil/core';
+import { printName } from '../../utils/utils';
+
 
 @Component({
   tag: 'my-component',
@@ -8,16 +10,19 @@ import { Component, Prop, h } from '@stencil/core';
 
 export class MyComponent {
 
-  @Prop() names: string[] = ["George", "Harold", "Susan"];
+  @Prop() names: string[] = ["Josh", "Jenny", "Kevin", "Michelle", "Carlos"];
 
   render() {
       return(
-        <ul>
-          Using hardcoded array within component:
-          {this.names.map((name) => (
-            <li>{name}</li>
-          ))}
-        </ul>
+        <div id="listContainer" class="container">
+          <h2>Here is a list of names:</h2>
+          <ul id="namesList">
+            {this.names.map((name, index) => (
+              <li id={`${index}`}>{printName(name)}</li>
+            ))}
+          </ul>          
+        </div>
+
       )
   }
 }

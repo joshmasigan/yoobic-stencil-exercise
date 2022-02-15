@@ -1,3 +1,27 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  text-align: left;
+  padding: 3% 20%;
+  line-height: 1.5rem;
+}
+
+li {
+  font-size: 1rem;
+}
+
 :host {
   display: block;
+}
+
+.container {
+  text-align: center;
+  background-color: #ACB992;
+  margin: 5%;
+  padding: 1% 7% 2%;
+  border-radius: 20px;
+  color: #0b2031;
 }

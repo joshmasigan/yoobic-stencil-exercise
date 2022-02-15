@@ -9,12 +9,6 @@ export namespace Components {
     interface MyComponent {
         "names": string[];
     }
-    interface ViewList {
-        "names": string;
-    }
-    interface ViewListItem {
-        "text": string;
-    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -23,38 +17,16 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
-    interface HTMLViewListElement extends Components.ViewList, HTMLStencilElement {
-    }
-    var HTMLViewListElement: {
-        prototype: HTMLViewListElement;
-        new (): HTMLViewListElement;
-    };
-    interface HTMLViewListItemElement extends Components.ViewListItem, HTMLStencilElement {
-    }
-    var HTMLViewListItemElement: {
-        prototype: HTMLViewListItemElement;
-        new (): HTMLViewListItemElement;
-    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
-        "view-list": HTMLViewListElement;
-        "view-list-item": HTMLViewListItemElement;
     }
 }
 declare namespace LocalJSX {
     interface MyComponent {
         "names"?: string[];
     }
-    interface ViewList {
-        "names"?: string;
-    }
-    interface ViewListItem {
-        "text"?: string;
-    }
     interface IntrinsicElements {
         "my-component": MyComponent;
-        "view-list": ViewList;
-        "view-list-item": ViewListItem;
     }
 }
 export { LocalJSX as JSX };
@@ -62,8 +34,6 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
-            "view-list": LocalJSX.ViewList & JSXBase.HTMLAttributes<HTMLViewListElement>;
-            "view-list-item": LocalJSX.ViewListItem & JSXBase.HTMLAttributes<HTMLViewListItemElement>;
         }
     }
 }
